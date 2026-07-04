@@ -74,11 +74,9 @@
     document.getElementById('hotelForm').addEventListener('submit', function(e){
       e.preventDefault();
       const v=id=>document.getElementById(id).value.trim();
-      const text=['Hi, please send Hotel Linen FOB quotation.', v('name')?'Name: '+v('name'):'', v('company')?'Company: '+v('company'):'', v('country')?'Country: '+v('country'):'', v('qty')?'Quantity: '+v('qty'):'', v('product')?'Product: '+v('product'):'', v('notes')?'Requirement: '+v('notes'):''].filter(Boolean).join('
-');
+      const text=['Hi, please send Hotel Linen FOB quotation.', v('name')?'Name: '+v('name'):'', v('company')?'Company: '+v('company'):'', v('country')?'Country: '+v('country'):'', v('qty')?'Quantity: '+v('qty'):'', v('product')?'Product: '+v('product'):'', v('notes')?'Requirement: '+v('notes'):''].filter(Boolean).join('\\n');
       window.open('https://wa.me/918708839378?text='+encodeURIComponent(text),'_blank');
     });
   </script>
 </body>
 </html> 
-
